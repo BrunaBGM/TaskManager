@@ -12,19 +12,18 @@ Aplicação para gerenciamento de tarefas.
 ## Pré-requisitos
 
 - [ASP.NET Core](https://dotnet.microsoft.com/download)
-- [SQL Server](https://www.microsoft.com/en-us/sql-server/sql-server-downloads) (ou outro banco de dados de sua escolha)
 
 ## Instalação
 
 1. Clone este repositório em seu ambiente de desenvolvimento:
 
    ```bash
-   git clone
+   git clone https://github.com/BrunaBGM/TaskManager.git
    
 2. Navegue até o diretório do projeto:
 
    ```bash
-    cd task-manager
+    cd TaskManager
    
 4. Instale as dependências usando o `dotnet`:
 
