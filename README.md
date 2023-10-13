@@ -9,6 +9,8 @@ Aplicação para gerenciamento de tarefas.
 - **Exclusão de Tarefas:** Remova tarefas que não são mais necessárias.
 - **Pesquisa de Tarefas:** Encontre tarefas rapidamente com uma função de pesquisa.
 
+![dashboard](https://github.com/BrunaBGM/TaskManager/assets/96302062/5c137145-cd52-4666-9663-6a787c2b6296)
+
 ## Pré-requisitos
 
 - [ASP.NET Core](https://dotnet.microsoft.com/download)
