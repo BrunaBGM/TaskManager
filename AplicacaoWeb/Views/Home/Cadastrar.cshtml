@@ -6,8 +6,12 @@
             <form asp-controller="Home" asp-action="Create">
                 <fieldset>
                     <h2 class="text-center mt-3">Cadastrar tarefa</h2>
+                    <input asp-for="Id" type="hidden" />
                     <div class="form-group">
-                        <input asp-for="Id" type="hidden" />
+                        <label asp-for="Status">Status</label>
+                        <select asp-for="Status" asp-items="Html.GetEnumSelectList<Status>()" class="form-control"></select>
+                    </div>
+                    <div class="form-group">
                         <label class="col-form-label mt-4" for="inputDefault">Título</label>
                         <input asp-for="Titulo" type="text" class="form-control" placeholder="Nome da tarefa" id="inputDefault">
                     </div>

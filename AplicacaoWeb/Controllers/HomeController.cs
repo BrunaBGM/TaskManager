@@ -45,7 +45,7 @@ namespace AplicacaoWeb.Controllers
 
                 if (existingTask != null)
                 {
- 
+                    existingTask.Status = task.Status;
                     existingTask.Titulo = task.Titulo;
                     existingTask.Descricao = task.Descricao;
                     existingTask.Pontuacao = task.Pontuacao;
@@ -63,12 +63,19 @@ namespace AplicacaoWeb.Controllers
 
         public IActionResult Excluir(int id)
         {
-            var tarefa = listaTarefas.FirstOrDefault(t => t.Id == id);
-            if (tarefa != null)
+            try
             {
-                listaTarefas.Remove(tarefa);
+                var tarefa = listaTarefas.FirstOrDefault(t => t.Id == id);
+                if (tarefa != null)
+                {
+                    listaTarefas.Remove(tarefa);
+                }
+                return Json(new { success = true });
             }
-            return RedirectToAction("Listar");
+            catch (Exception ex) 
+            {
+                return Json(new { success = false, error = ex.Message });
+            }
         }
 
         [HttpGet]

@@ -1,4 +1,6 @@
-﻿namespace AplicacaoWeb.Models
+﻿using System.Net.NetworkInformation;
+
+namespace AplicacaoWeb.Models
 {
     public class TaskItem
     {
@@ -7,5 +9,7 @@
         public string Descricao { get; set; } 
         public int Pontuacao { get; set; }
         public DateTime DataCriacao { get; set; } = DateTime.Now;
+        public Status Status { get; set; }
+
     }
 }
